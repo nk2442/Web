@@ -36,7 +36,7 @@ function Signin (props) {
 			<label htmlFor="signin_mdp1">Password</label><input type="password" id="signin_mdp1" onChange={getPass1}/>
 			<label htmlFor="signin_mdp2">Password (2)</label><input type="password" id="signin_mdp2" onChange={getPass2}/>
 			<button type="submit">Sign In</button><button type="reset">Reset</button>	
-			{passOK ? <p></p>:<p style={{color:"red"}}>Erreur: mots de passe différents</p>}
+			{passOK ? <p></p>:<p className="error-message">Erreur: mots de passe différents</p>}
 		</form>
 		</div>
    );
