@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import NavigationPanel from "./navigationpanel";
 import Signin from "./signin"
+import Dashboard from "./Dashboard"
 
 function MainPage (props) {
 	const [isConnected, setConnect] = useState(false);
@@ -20,7 +21,10 @@ function MainPage (props) {
 		<>
 			<NavigationPanel login={getConnected} logout={setLogout} isConnected={isConnected}/>
 			<div>
-				{page==="signin_page"? <Signin login={getConnected} /> : null}
+				{page === "signin_page" ? 
+					<Signin login={getConnected} /> : 
+					<Dashboard />
+				}
 			</div>
 		</>
 	);
