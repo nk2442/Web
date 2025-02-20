@@ -8,11 +8,22 @@ function Login (props) {
 	const getPassword = (evt) => {setPassword(evt.target.value)} 	
 
 	return (
-		<form action={props.login}>
-			<label htmlFor="login">Login</label><input id="login" onChange={getLogin}/>
-			<label htmlFor="mdp">Mot de passe</label><input type="password" id="mdp"  onChange={getPassword}/>
-			<button type="submit">Log In</button><button type="reset">Reset</button>
-		</form>	 
+		<div className="form-container">
+			<form onSubmit={props.login}>
+				<div className="form-row">
+					<label htmlFor="login">Login</label>
+					<input id="login" onChange={getLogin}/>
+				</div>
+				<div className="form-row">
+					<label htmlFor="mdp">Mot de passe</label>
+					<input type="password" id="mdp" onChange={getPassword}/>
+				</div>
+				<div className="button-group">
+					<button type="submit">Log In</button>
+					<button type="reset">Reset</button>
+				</div>
+			</form>
+		</div>
 	 );
 }
 

@@ -2,45 +2,67 @@ body {
   margin: 0;
   padding: 20px;
   font-family: Arial, sans-serif;
+  background-color: #f0f2f5;
 }
 
 nav#navigation_pan {
-  background-color: #f8f9fa;
+  background-color: #ffffff;
   padding: 1rem;
   margin-bottom: 2rem;
-}
-
-form {
-  max-width: 400px;
-  margin: 0 auto;
-  padding: 20px;
-  border: 1px solid #ddd;
-  border-radius: 8px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-label {
-  display: block;
-  margin-bottom: 5px;
-  font-weight: bold;
+.form-container {
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 25px;
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
 
-input {
-  width: 100%;
-  padding: 8px;
+.form-row {
   margin-bottom: 15px;
-  border: 1px solid #ddd;
+}
+
+.form-row label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 600;
+  color: #333;
+}
+
+.form-row input {
+  width: 100%;
+  padding: 10px;
+  border: 2px solid #ddd;
   border-radius: 4px;
+  font-size: 14px;
+  box-sizing: border-box;
+}
+
+.form-row input:focus {
+  border-color: #007bff;
+  outline: none;
+  box-shadow: 0 0 0 2px rgba(0, 123, 255, 0.25);
+}
+
+.button-group {
+  display: flex;
+  gap: 10px;
+  margin-top: 20px;
 }
 
 button {
+  flex: 1;
   background-color: #007bff;
   color: white;
-  padding: 10px 15px;
+  padding: 12px 15px;
   border: none;
   border-radius: 4px;
   cursor: pointer;
-  margin-right: 10px;
+  font-size: 14px;
+  font-weight: 600;
 }
 
 button[type="reset"] {
@@ -52,6 +74,8 @@ button:hover {
 }
 
 .error-message {
-  color: red;
+  color: #dc3545;
   margin-top: 10px;
+  font-size: 14px;
+  text-align: center;
 }
