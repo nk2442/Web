@@ -2,7 +2,7 @@ function Header() {
   return (
     <header className="dashboard-header">
       <div className="logo">
-        <h1>MessageApp</h1>
+        <h1>OrganizAsso</h1>
       </div>
       
       <div className="search-zone">
